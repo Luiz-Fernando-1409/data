@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Criando Abas
+  </title>
+  <meta charset="UTF-8" />
+  <style type="text/css">
+    .abas {
+    position: relative;
+    }
+    .aba {
+    display: inline;
+    }
+    .aba > a {
+    float: left;
+    padding: 0.5em 1em;
+    background: linear-gradient(#FFF, #EEE);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCC #CCC #FFF;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-size: 2rem;
+    text-decoration: none;
+    }
+    .aba:not(:target) a {
+    border-bottom: 0 none;
+
+    }
+    .aba:target a, a:hover {
+    background: white;
+    }
+    .conteudo {
+    position: absolute;
+    left: 0;
+    top: calc(5em + 4px); /* altura do link + bordas */
+    z-index: -2;
+    border: 1px solid #CCC;
+    background-color: white;
+    }
+    .aba:target .conteudo {
+    z-index: -1;
+    }
+
+   
+  </style>
+</head>
+<body>
+  <!-- Criando a listagem -->
+  <ul class="abas">
+    <!-- Aqui, criação da primeira aba -->
+    <li class="aba" id="aba-1">
+     <a href="#aba-1">CADASTRAR USUÁRIO</a>
+     <section class="conteudo"> 
+      <form id=cadastra method="post" action="functions.php" >
+        <span>Cadastrar/Excluir Usuário</span><br>
+        USUÁRIO:<input required name=user oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type = "number" maxlength = "6" /><br>
+
+        NOME:<input required type=text name=name oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength = "50"><br>
+        
+        <label for="label-select">SETOR:</label>
+        <select name="sector-select">
+            <option value="">--Selecione o setor--</option>
+            <option value="Axial">Axial</option>
+            <option value="Radial">Radial</option>
+            <option value="Linha Rápida">Linha Rápida</option>
+            <option value="Snap-in">Snap In</option>
+            <option value="Giga">Giga</option>
+            <option value="Film PW">FILM PW</option>
+        </select><br>
+
+        SENHA:<input required type="password" name="senha"><br>
+        CONFIRME A SENHA:<input required type="password" name="senhaC"><br>
+
+        <label for="label-select">PERFIL:</label>
+        <select name="perfilselect">
+            <option value="">--Selecione o perfil--</option>
+            <option value="Gerencial">Gerencial</option>
+            <option value="Operacional">Operacional</option>
+        </select><br>            
+
+        E-MAIL:<input type=email name=email><br>
+
+        <label for="label-select">CARGO:</label>
+        <select name="cargoselect">
+            <option value="">--Selecione o cargo--</option>
+            <option value="Mecânico Preparador 1">Mecânico Preparador 1</option>
+            <option value="Mecânico Preparador 2">Mecânico Preparador 2</option>
+            <option value="Operadora de Máquina">Operadora de Máquina</option>
+            <option value="Auxiliar de Fabricação">Auxiliar de Fabricação</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Técnico de Produto">Técnico de Produto</option>
+            <option value="Técnico de Processo">Técnico de Processo</option>
+        </select><br>
+
+    DATA DE ADMISSÃO:<input type=date name=date><br>    
+
+        <label for="label-select">GÊNERO:</label>
+        <select name="genderselect">
+            <option value="">--Selecione o gênero--</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+            <option value="O">Outro</option>
+        </select><br>                            
+        <input type="hidden" name="action_type" value="cadastra_usuario">
+        <button class="submit" type="submit" value="submit">SALVAR</button><br>
+        <button class="clear" type="clear">LIMPAR CAMPOS</button>                                  
+</div>
+     </section>
+   </li>
+   <!-- Aqui, criação da segunda aba -->
+   <li class="aba" id="aba-2"> 
+     <a href="#aba-2">CONSULTAR USUÁRIO</a> 
+     <section class="conteudo"> Conteúdo da Aba 2 </section> 
+   </li> 
+
+   <!-- Aqui, criação da terceira aba -->
+   <li class="aba" id="aba-3"> 
+     <a href="#aba-3">EDITAR DADOS DO USUÁRIO</a> 
+     <section class="conteudo"> Conteúdo da Aba 3 </section> 
+   </li> 
+</ul>
+
+</body>
+</html>

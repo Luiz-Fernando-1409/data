@@ -1,0 +1,126 @@
+body{
+   background-image: linear-gradient(to right,rgb(185, 180, 190),rgb(248, 248, 250));
+}
+
+
+#container{
+    width:100%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#login{  
+    flex-direction: column;
+    text-align: center;  
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 90vh;   
+}
+
+.center_text{
+    padding: 10px;
+    font-size: 2rem;
+    color: rgb(129, 31, 31);
+}
+
+#imglogo{
+    width:30vw;
+    height: auto;
+}
+
+fieldset{
+    border-radius: 10px;
+    border-color:  rgb(129, 31, 31);
+    }
+
+input{
+    margin: 10px;
+    width:30vw;
+    height:3vh;
+    background: white;
+	color: black;
+	border:none;
+	border-radius: 20px;
+	text-shadow: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+button.submit {
+    width:30vw;
+    height:5vh;
+	background: #0c5c30;
+	color: #fff;
+	border:none;
+	border-radius: 20px;
+	text-shadow: none;
+    font-size: 20px;
+    margin: 10px;
+}
+
+button.submit:hover {
+	background: #287e49;
+	color: #fff;
+	cursor:pointer;
+}
+
+button.clear {
+    width:30vw;
+    height:5vh;
+	background: #3b2cc4;
+	color: #fff;
+	border:none;
+	border-radius: 20px;
+	text-shadow: none;
+    font-size: 20px;
+    margin: 10px;
+}
+
+button.clear:hover {
+	background: #5c5edb;
+	color: #fff;
+	cursor:pointer;
+}
+
+#header{
+    background-color:  rgb(129, 31, 31);
+    width:100%;
+    height:15vh;
+    display:flex;
+    flex-direction: row;
+    color: white;
+    }
+
+#header_logo{
+    max-width: 20%;
+    max-height: 100%;
+}
+
+#header *{
+    padding-left: 10rem;    
+}
+
+span{
+    font-size: 1.5rem;
+}
+
+
+input[type=radio], input[type=checkbox] {
+    width: 1rem;
+    vertical-align: middle;
+}
+
+label{
+    font-size: 1rem;
+    margin: 10px;
+    }
+
+select{
+    font-size: 1rem;
+    margin: 10px;
+}
